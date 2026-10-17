@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rh-agent"
+version = "0.1.0"
+description = "Crypto-only trading agent for a Robinhood Agentic account"
+requires-python = ">=3.10"
+dependencies = [
+    "claude-agent-sdk>=0.2.152",
+    "python-dotenv>=1.0.1",
+    "tzdata>=2024.1",
+]
+
+[project.scripts]
+rh-agent = "rh_agent.main:main"
+rh-agent-once = "rh_agent.run_once:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
