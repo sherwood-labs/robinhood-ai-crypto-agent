@@ -13,3 +13,6 @@ status.html
 
 node_modules/
 .next/
+
+.claude/settings.local.json
+.mcp.json
